@@ -29,11 +29,6 @@ export default function Login() {
           />
         </div>
 
-        <div className="w-full flex gap-3 items-center justify-between">
-          <label htmlFor="secret">Client Secret</label>
-          <input className="text-gray-900 p-1" id="secret" />
-        </div>
-
         <div className="w-full flex justify-end text-gray-400 hover:text-white">
           <button onClick={onClick} type="submit">
             Login
