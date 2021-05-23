@@ -13,7 +13,7 @@ function getHashParams() {
 }
 
 const useHashParam = () => {
-  const [state, setState] = useState<Record<string, string>>({});
+  const [state, setState] = useState<Record<string, string | undefined>>({});
 
   useEffect(() => {
     const hash = getHashParams();
@@ -24,8 +24,7 @@ const useHashParam = () => {
 };
 
 const Home: NextPage = () => {
-  const hashParam = useHashParam();
-  console.log(hashParam);
+  const { accessToken } = useHashParam();
   return <div />;
 };
 
